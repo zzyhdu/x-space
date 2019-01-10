@@ -1,0 +1,142 @@
+<style lang="less">
+  .userinfo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .userinfo-avatar {
+    width: 80rpx;
+    height: 80rpx;
+    border-radius: 50%;
+  }
+
+  .userinfo-nickname {
+    color: #aaa;
+  }
+</style>
+<template>
+  <view class="container">
+    <panel>
+      <pickerCity mode="citys"></pickerCity>
+      <pickerRoomType mode="equipmentRoomTypes"></pickerRoomType>
+      <pickerAddressType mode="propertyRightTypes"></pickerAddressType>
+      <pickerAddressTuning mode="addressTuning"></pickerAddressTuning>
+      <pickerChannelType mode="channelBuild"></pickerChannelType>
+      <pickerBatterTypes mode="batterTypes"></pickerBatterTypes>
+      <pickerEnvironment mode="environment"></pickerAddressType>
+      <pickerPower mode="power"></pickerPower>
+      <pickerBearingType mode="bearingTypes"></pickerBearingType>
+      <pickerBuildType mode="buildTypes"></pickerBuildType>
+      <pickerHouseType mode="houseTypes"></pickerHouseType>
+      <input placeholder="这是一个可以自动聚焦的input" auto-focus />
+      <injj mode="houseTypes"/>
+    </panel>
+
+    <panel>
+      <view class="title" slot="title">其它测试</view>
+      <button @tap="goNextPage" size="mini">打开新页面</button>
+    </panel>
+
+    <toast />
+  </view>
+</template>
+
+<script>
+  import wepy from 'wepy'
+  import { connect } from 'wepy-redux'
+  import Panel from '@/components/panel' // alias example
+  import Counter from 'counter' // alias example
+  import List from '../components/list' // aliasFields example
+  import moduleA from 'module-a' // aliasFields ignore module example
+  import Group from '../components/group'
+  import XPicker from '../components/x-picker'
+  import XInput from '../components/x-input'
+
+  import Toast from 'wepy-com-toast'
+  import testMixin from '../mixins/test'
+  import {ScoreItems,datas,se} from '../Utils';
+
+  console.log('moduleA ignored: ', moduleA) // => moduleA ignored: {}
+
+  @connect({
+    num (state) {
+      return state.counter.num
+    },
+    asyncNum (state) {
+      return state.counter.asyncNum
+    },
+    sumNum (state) {
+      return state.counter.num + state.counter.asyncNum
+    }
+  })
+
+  export default class Index extends wepy.page {
+    config = {
+      navigationBarTitleText: 'x-space'
+    }
+    components = {
+      panel: Panel,
+      counter1: Counter,
+      counter2: Counter,
+      list: List,
+      group: Group,
+      toast: Toast,
+      pickerCity: XPicker,
+      pickerRoomType: XPicker,
+      pickerAddressType: XPicker,
+      pickerAddressTuning: XPicker,
+      pickerChannelType: XPicker,
+      pickerBatterTypes: XPicker,
+      pickerEnvironment: XPicker,
+      pickerPower: XPicker,
+      pickerBearingType: XPicker,
+      pickerBuildType: XPicker,
+      pickerHouseType: XPicker,
+      injj: XInput,
+    }
+
+    data = {
+      scoreItems: ScoreItems.CITYS,
+    }
+
+    computed = {
+      now () {
+        return +new Date()
+      }
+    }
+
+    methods = {
+      toast () {
+        let promise = this.$invoke('toast', 'show', {
+          title: '自定义标题',
+          img: 'https://raw.githubusercontent.com/kiinlam/wetoast/master/images/star.png'
+        })
+
+        promise.then((d) => {
+          console.log('toast done')
+        })
+      },
+      goNextPage () {
+        this.$root.$navigate({url: 'main?id=' + 'hello'});
+      },
+      tap () {
+        console.log('do noting from ' + this.$name)
+      },
+      communicate () {
+        console.log(this.$name + ' tap')
+
+        this.$invoke('counter2', 'minus', 45, 6)
+        this.$invoke('counter1', 'plus', 45, 6)
+
+        this.$broadcast('index-broadcast', 1, 3, 4)
+      },
+    }
+
+    events = {
+    }
+
+    onLoad() {
+    }
+  }
+</script>

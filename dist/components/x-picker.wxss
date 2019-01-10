@@ -1,0 +1,5 @@
+@import "./groupitem.wxss";
+.picker {
+  padding: 13px;
+  background-color: #FFFFFF;
+}

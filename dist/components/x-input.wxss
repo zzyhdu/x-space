@@ -1,0 +1,15 @@
+@import "./groupitem.wxss";
+.picker {
+  padding: 13px;
+  background-color: #FFFFFF;
+}
+.text {
+  font-size: 18px;
+  font-weight: bold;
+}
+.text.red {
+  color: red;
+}
+.text.green {
+  color: green;
+}

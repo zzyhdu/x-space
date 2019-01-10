@@ -1,0 +1,16 @@
+console.log('WePY开启错误监控');
+console.error("CLI报错：\n/Users/mac/workspace/wx/x-space/src/pages/index.wpy\n   57:10  error  'testMixin' is defined but never used  no-unused-vars\n   58:21  error  A space is required after ','          comma-spacing\n   58:22  error  'datas' is defined but never used      no-unused-vars\n   58:27  error  A space is required after ','          comma-spacing\n   58:28  error  'se' is defined but never used         no-unused-vars\n   58:47  error  Extra semicolon                        semi\n   96:19  error  Unexpected trailing comma              comma-dangle\n  100:35  error  Unexpected trailing comma              comma-dangle\n  121:58  error  Extra semicolon                        semi\n  133:8   error  Unexpected trailing comma              comma-dangle\n\n✖ 10 problems (10 errors, 0 warnings)\n");
+console.warn("CLI报错：WARNING IN : src/pages/index.wpy\n[xmldom warning]	unclosed xml attribute\n@#[line:27,col:7]");
+console.warn("CLI报错：WARNING IN : src/pages/index.wpy\n[xmldom warning]	unclosed xml attribute\n@#[line:32,col:7]");
+console.warn("CLI报错：WARNING IN : src/components/x-picker.wpy\n[xmldom warning]	attribute \"{{array}}\" missed quot(\")!!\n@#[line:10,col:5]");
+console.warn("CLI报错：WARNING IN : src/components/x-picker.wpy\n[xmldom warning]	attribute \"{{array}}\" missed quot(\")!!\n@#[line:10,col:5]");
+console.warn("CLI报错：WARNING IN : src/components/x-picker.wpy\n[xmldom warning]	attribute \"{{array}}\" missed quot(\")!!\n@#[line:10,col:5]");
+console.warn("CLI报错：WARNING IN : src/components/x-picker.wpy\n[xmldom warning]	attribute \"{{array}}\" missed quot(\")!!\n@#[line:10,col:5]");
+console.warn("CLI报错：WARNING IN : src/components/x-picker.wpy\n[xmldom warning]	attribute \"{{array}}\" missed quot(\")!!\n@#[line:10,col:5]");
+console.warn("CLI报错：WARNING IN : src/components/x-picker.wpy\n[xmldom warning]	attribute \"{{array}}\" missed quot(\")!!\n@#[line:10,col:5]");
+console.warn("CLI报错：WARNING IN : src/components/x-picker.wpy\n[xmldom warning]	attribute \"{{array}}\" missed quot(\")!!\n@#[line:10,col:5]");
+console.warn("CLI报错：WARNING IN : src/components/x-picker.wpy\n[xmldom warning]	attribute \"{{array}}\" missed quot(\")!!\n@#[line:10,col:5]");
+console.warn("CLI报错：WARNING IN : src/components/x-picker.wpy\n[xmldom warning]	attribute \"{{array}}\" missed quot(\")!!\n@#[line:10,col:5]");
+console.warn("CLI报错：WARNING IN : src/components/x-picker.wpy\n[xmldom warning]	attribute \"{{array}}\" missed quot(\")!!\n@#[line:10,col:5]");
+console.warn("CLI报错：WARNING IN : src/components/x-picker.wpy\n[xmldom warning]	attribute \"{{array}}\" missed quot(\")!!\n@#[line:10,col:5]");
+console.warn("CLI报错：WARNING IN : src/components/x-input.wpy\n[xmldom warning]	unclosed xml attribute\n@#[line:21,col:5]");

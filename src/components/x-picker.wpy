@@ -1,0 +1,105 @@
+<style type="less">
+  .group {}
+  .picker{
+    padding: 13px;
+    background-color: #FFFFFF;
+  }
+</style>
+<template>
+  <view class="group">
+    <picker range = {{array}} value="{{index}}" @change='bindPickerChange'>
+      <view class="picker">
+        {{label}}：{{array[index]}}
+      </view>
+    </picker>
+  </view>
+</template>
+<script>
+  import wepy from 'wepy';
+  import GroupItem from './groupitem';
+  import {datas,scoreCalculator,ScoreItems} from '../Utils';
+
+  export default class XPicker extends wepy.component {
+    props = {
+      mode: String,
+      title: String
+    };
+
+    data = {
+      array: [],
+      index: '1',
+      label: 'label',
+    }
+
+    onLoad () {
+      console.log('zzy','onLoad',this.mode);
+      const self = this;
+      switch (this.mode) {
+        case ScoreItems.CITYS:
+          self.array = datas.citys.array;
+          self.label = datas.citys.label;
+          break;
+        case ScoreItems.EQUIPMENT_ROOM_TYPES:
+          self.array = datas.equipmentRoomTypes.array;
+          self.label = datas.equipmentRoomTypes.label;
+          break;
+        case ScoreItems.PROPERTY_RIGHT_TYPES:
+          self.array = datas.propertyRightTypes.array;
+          self.label = datas.propertyRightTypes.label;
+          break;
+        case ScoreItems.ADDRESS_TUNING:
+          self.array = datas.addressTuning.array;
+          self.label = datas.addressTuning.label;
+          break;
+        case ScoreItems.CHANNEL_BUILD:
+          self.array = datas.channelBuild.array;
+          self.label = datas.channelBuild.label;
+          break;
+        case ScoreItems.BATTER_TYPES:
+          self.array = datas.batterTypes.array;
+          self.label = datas.batterTypes.label;
+          break;
+        case ScoreItems.ENVIRONMENT:
+          self.array = datas.environment.array;
+          self.label = datas.environment.label;
+          break;
+        case ScoreItems.POWER:
+          self.array = datas.power.array;
+          self.label = datas.power.label;
+          break;
+        case ScoreItems.BEARING_TYPES:
+          self.array = datas.bearingTypes.array;
+          self.label = datas.bearingTypes.label;
+          break;
+        case ScoreItems.BUILD_TYPES:
+          self.array = datas.buildTypes.array;
+          self.label = datas.buildTypes.label;
+          break;
+        case ScoreItems.HOUSE_TYPES:
+          self.array = datas.houseTypes.array;
+          self.label = datas.houseTypes.label;
+          break;
+        default:
+      }
+      self.index = '0';
+      this.$apply();
+      // this.array =
+    }
+
+    components = {
+      groupitem: GroupItem
+    }
+    methods = {
+      tap () {
+        console.log(`Clicked Group xpicker`)
+      },
+      bindPickerChange: function (e) {
+        console.log('picker发送选择改变，携带值为', e.detail.value )
+        this.index = e.detail.value;
+        scoreCalculator.onDataChange({scoreItem: this.mode,value: e.detail.value});
+      },
+    }
+
+
+  }
+</script>
