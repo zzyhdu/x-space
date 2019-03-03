@@ -9,7 +9,7 @@
 	},
 	"compileType": "miniprogram",
 	"appid": "wx83317de6dee4154c",
-	"projectname": "x-space",
-	"miniprogramRoot": "./dist",
+	"projectname": "x-space2",
+	"miniprogramRoot": "dist/",
 	"condition": {}
 }

@@ -29,8 +29,15 @@
       <pickerBearingType mode="bearingTypes"></pickerBearingType>
       <pickerBuildType mode="buildTypes"></pickerBuildType>
       <pickerHouseType mode="houseTypes"></pickerHouseType>
-      <input placeholder="这是一个可以自动聚焦的input" auto-focus />
-      <injj mode="houseTypes"/>
+      <inputName mode="name"/>
+      <inputAddress mode="address"/>
+      <inputLongitude mode="longitude"/>
+      <inputLatitude mode="latitude"/>
+      <inputPrice mode="price"/>
+      <inputAirConditionerNumber mode="airConditionerNumber"/>
+      <inputLayerHeight mode="layerHeight"/>
+      <inputRoomArea mode="roomArea"/>
+      <inputRackNumber mode="rackNumber"/>
     </panel>
 
     <panel>
@@ -93,7 +100,15 @@
       pickerBearingType: XPicker,
       pickerBuildType: XPicker,
       pickerHouseType: XPicker,
-      injj: XInput,
+      inputName: XInput,
+      inputAddress: XInput,
+      inputLongitude: XInput,
+      inputLatitude: XInput,
+      inputPrice: XInput,
+      inputAirConditionerNumber: XInput,
+      inputLayerHeight: XInput,
+      inputRoomArea: XInput,
+      inputRackNumber: XInput,
     }
 
     data = {

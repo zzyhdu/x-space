@@ -1,7 +1,6 @@
-@import "./groupitem.wxss";
-.picker {
-  padding: 13px;
-  background-color: #FFFFFF;
+.group {
+  flex-direction: row;
+  display: flex;
 }
 .text {
   font-size: 18px;

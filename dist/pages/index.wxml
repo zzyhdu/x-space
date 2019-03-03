@@ -105,10 +105,57 @@
     </picker>
   </view>
 
-      <input placeholder="这是一个可以自动聚焦的input" auto-focus/>
       
   <view class="group">
-    <text class="text"> {{$injj$value}} </text>
+    <text class="text"> {{$inputName$label}} </text>
+    <input placeholder="这是一个可以自动聚焦的input" auto-focus/>
+  </view>
+
+      
+  <view class="group">
+    <text class="text"> {{$inputAddress$label}} </text>
+    <input placeholder="这是一个可以自动聚焦的input" auto-focus/>
+  </view>
+
+      
+  <view class="group">
+    <text class="text"> {{$inputLongitude$label}} </text>
+    <input placeholder="这是一个可以自动聚焦的input" auto-focus/>
+  </view>
+
+      
+  <view class="group">
+    <text class="text"> {{$inputLatitude$label}} </text>
+    <input placeholder="这是一个可以自动聚焦的input" auto-focus/>
+  </view>
+
+      
+  <view class="group">
+    <text class="text"> {{$inputPrice$label}} </text>
+    <input placeholder="这是一个可以自动聚焦的input" auto-focus/>
+  </view>
+
+      
+  <view class="group">
+    <text class="text"> {{$inputAirConditionerNumber$label}} </text>
+    <input placeholder="这是一个可以自动聚焦的input" auto-focus/>
+  </view>
+
+      
+  <view class="group">
+    <text class="text"> {{$inputLayerHeight$label}} </text>
+    <input placeholder="这是一个可以自动聚焦的input" auto-focus/>
+  </view>
+
+      
+  <view class="group">
+    <text class="text"> {{$inputRoomArea$label}} </text>
+    <input placeholder="这是一个可以自动聚焦的input" auto-focus/>
+  </view>
+
+      
+  <view class="group">
+    <text class="text"> {{$inputRackNumber$label}} </text>
     <input placeholder="这是一个可以自动聚焦的input" auto-focus/>
   </view>
 

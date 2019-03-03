@@ -14,6 +14,7 @@
 //   | 'houseTypes';
 
 export const ScoreItems = {
+  //dropdown
   CITYS: 'citys',
   PROPERTY_RIGHT_TYPES: 'propertyRightTypes',
   EQUIPMENT_ROOM_TYPES: 'equipmentRoomTypes',
@@ -25,6 +26,16 @@ export const ScoreItems = {
   BEARING_TYPES: 'bearingTypes',
   BUILD_TYPES: 'buildTypes',
   HOUSE_TYPES: 'houseTypes',
+  //input
+  NAME: 'name',
+  ADDRESS: 'address',
+  LONGITUDE: 'longitude',
+  LATITUDE: 'latitude',
+  PRICE: 'price',
+  AIR_CONDITIONER_NUMBER: 'airConditionerNumber',
+  LAYER_HEIGHT: 'layerHeight',
+  ROOM_AREA: 'roomArea',
+  RACK_NUMBER: 'rackNumber',
 };
 
 export const datas = {
@@ -83,6 +94,34 @@ export const datas = {
     array: ['一手房', '二手房'],
   },
 
+  name: {
+    label: '机房名',
+  },
+  address: {
+    label: '机房地址',
+  },
+  longitude: {
+    label: '经度',
+  },
+  latitude: {
+    label: '维度',
+  },
+  price: {
+    label: '价格',
+  },
+  airConditionerNumber: {
+    label: '可安装空调数',
+  },
+  layerHeight: {
+    label: '层高',
+  },
+  roomArea: {
+    label: '机房面积',
+  },
+  rackNumber: {
+    label: '可安装机架数',
+  },
+
   p_equipmentRoomTypes: {
     scores: [[1,1,1],[1,1,1],[0.95,1,1,],[0.8,0.9,0.95],[0,0,0.9],[0,0,0.9],[0,0.5,0.9]],
   },
@@ -135,6 +174,16 @@ export default class ScoreCalculator{
     bearingTypesIndex: 0,
     buildTypesIndex: 0,
     houseTypesIndex: 0,
+
+    name: '',
+    address: '',
+    longitude: 0,
+    latitude: 0,
+    price: 0,
+    airConditionerNumber: 0,
+    layerHeight: 0,
+    roomArea: 0,
+    rackNumber: 0,
   };
 
   onDataChange(data){
@@ -174,6 +223,33 @@ export default class ScoreCalculator{
       case ScoreItems.HOUSE_TYPES:
         _datas.houseTypesIndex = value;
         break;
+      case ScoreItems.NAME:
+        _datas.name = value;
+        break;
+      case ScoreItems.ADDRESS:
+        _datas.address = value;
+        break;
+      case ScoreItems.LONGITUDE:
+        _datas.longitude = value;
+        break;
+      case ScoreItems.LATITUDE:
+        _datas.latitude = value;
+        break;
+      case ScoreItems.PRICE:
+        _datas.price = value;
+        break;
+      case ScoreItems.AIR_CONDITIONER_NUMBER:
+        _datas.airConditionerNumber = value;
+        break;
+      case ScoreItems.LAYER_HEIGHT:
+        _datas.layerHeight = value;
+        break;
+      case ScoreItems.ROOM_AREA:
+        _datas.roomArea = value;
+        break;
+      case ScoreItems.RACK_NUMBER:
+        _datas.rackNumber = value;
+        break;
       default:
     }
     console.log('zzy','scoreItem',_datas);
@@ -181,7 +257,7 @@ export default class ScoreCalculator{
 
   get result(){
     const {_datas} = this;
-    
+
     return 0;
   }
 };
