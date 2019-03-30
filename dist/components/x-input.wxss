@@ -1,10 +1,12 @@
 .group {
   flex-direction: row;
   display: flex;
+  align-items: center;
 }
 .text {
-  font-size: 18px;
+  font-size: 14px;
   font-weight: bold;
+  padding-left: 13px;
 }
 .text.red {
   color: red;

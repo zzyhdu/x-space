@@ -1,12 +1,6 @@
 
   <view class="container">
     
-  <view class="panel">
-    
-      Title
-    
-    
-      
   <view class="group">
     <picker range="{{$pickerCity$array}}" value="{{$pickerCity$index}}" bindchange="$pickerCity$bindPickerChange">
       <view class="picker">
@@ -15,7 +9,7 @@
     </picker>
   </view>
 
-      
+    
   <view class="group">
     <picker range="{{$pickerRoomType$array}}" value="{{$pickerRoomType$index}}" bindchange="$pickerRoomType$bindPickerChange">
       <view class="picker">
@@ -24,7 +18,7 @@
     </picker>
   </view>
 
-      
+    
   <view class="group">
     <picker range="{{$pickerAddressType$array}}" value="{{$pickerAddressType$index}}" bindchange="$pickerAddressType$bindPickerChange">
       <view class="picker">
@@ -33,7 +27,7 @@
     </picker>
   </view>
 
-      
+    
   <view class="group">
     <picker range="{{$pickerAddressTuning$array}}" value="{{$pickerAddressTuning$index}}" bindchange="$pickerAddressTuning$bindPickerChange">
       <view class="picker">
@@ -42,7 +36,7 @@
     </picker>
   </view>
 
-      
+    
   <view class="group">
     <picker range="{{$pickerChannelType$array}}" value="{{$pickerChannelType$index}}" bindchange="$pickerChannelType$bindPickerChange">
       <view class="picker">
@@ -51,7 +45,7 @@
     </picker>
   </view>
 
-      
+    
   <view class="group">
     <picker range="{{$pickerBatterTypes$array}}" value="{{$pickerBatterTypes$index}}" bindchange="$pickerBatterTypes$bindPickerChange">
       <view class="picker">
@@ -60,7 +54,7 @@
     </picker>
   </view>
 
-      
+    
   <view class="group">
     <picker range="{{$pickerEnvironment$array}}" value="{{$pickerEnvironment$index}}" bindchange="$pickerEnvironment$bindPickerChange">
       <view class="picker">
@@ -69,7 +63,7 @@
     </picker>
   </view>
 
-      
+    
   <view class="group">
     <picker range="{{$pickerPower$array}}" value="{{$pickerPower$index}}" bindchange="$pickerPower$bindPickerChange">
       <view class="picker">
@@ -78,7 +72,7 @@
     </picker>
   </view>
 
-      
+    
   <view class="group">
     <picker range="{{$pickerBearingType$array}}" value="{{$pickerBearingType$index}}" bindchange="$pickerBearingType$bindPickerChange">
       <view class="picker">
@@ -87,7 +81,7 @@
     </picker>
   </view>
 
-      
+    
   <view class="group">
     <picker range="{{$pickerBuildType$array}}" value="{{$pickerBuildType$index}}" bindchange="$pickerBuildType$bindPickerChange">
       <view class="picker">
@@ -96,7 +90,7 @@
     </picker>
   </view>
 
-      
+    
   <view class="group">
     <picker range="{{$pickerHouseType$array}}" value="{{$pickerHouseType$index}}" bindchange="$pickerHouseType$bindPickerChange">
       <view class="picker">
@@ -105,87 +99,62 @@
     </picker>
   </view>
 
-      
+    
   <view class="group">
-    <text class="text"> {{$inputName$label}} </text>
-    <input placeholder="这是一个可以自动聚焦的input" auto-focus/>
-  </view>
-
-      
-  <view class="group">
-    <text class="text"> {{$inputAddress$label}} </text>
-    <input placeholder="这是一个可以自动聚焦的input" auto-focus/>
-  </view>
-
-      
-  <view class="group">
-    <text class="text"> {{$inputLongitude$label}} </text>
-    <input placeholder="这是一个可以自动聚焦的input" auto-focus/>
-  </view>
-
-      
-  <view class="group">
-    <text class="text"> {{$inputLatitude$label}} </text>
-    <input placeholder="这是一个可以自动聚焦的input" auto-focus/>
-  </view>
-
-      
-  <view class="group">
-    <text class="text"> {{$inputPrice$label}} </text>
-    <input placeholder="这是一个可以自动聚焦的input" auto-focus/>
-  </view>
-
-      
-  <view class="group">
-    <text class="text"> {{$inputAirConditionerNumber$label}} </text>
-    <input placeholder="这是一个可以自动聚焦的input" auto-focus/>
-  </view>
-
-      
-  <view class="group">
-    <text class="text"> {{$inputLayerHeight$label}} </text>
-    <input placeholder="这是一个可以自动聚焦的input" auto-focus/>
-  </view>
-
-      
-  <view class="group">
-    <text class="text"> {{$inputRoomArea$label}} </text>
-    <input placeholder="这是一个可以自动聚焦的input" auto-focus/>
-  </view>
-
-      
-  <view class="group">
-    <text class="text"> {{$inputRackNumber$label}} </text>
-    <input placeholder="这是一个可以自动聚焦的input" auto-focus/>
+    <text class="text"> {{$inputName$label}}:  </text>
+    <input class="text" placeholder="请输入。。" auto-focus bindchange="$inputName$bindTextChange"/>
   </view>
 
     
+  <view class="group">
+    <text class="text"> {{$inputAddress$label}}:  </text>
+    <input class="text" placeholder="请输入。。" auto-focus bindchange="$inputAddress$bindTextChange"/>
   </view>
 
-
     
-  <view class="panel">
-    <view class="title">其它测试</view>
-    
-      
-      <button bindtap="goNextPage" size="mini">打开新页面</button>
-    
+  <view class="group">
+    <text class="text"> {{$inputLongitude$label}}:  </text>
+    <input class="text" placeholder="请输入。。" auto-focus bindchange="$inputLongitude$bindTextChange"/>
   </view>
 
+    
+  <view class="group">
+    <text class="text"> {{$inputLatitude$label}}:  </text>
+    <input class="text" placeholder="请输入。。" auto-focus bindchange="$inputLatitude$bindTextChange"/>
+  </view>
 
     
-    <view class="wetoast {{$toast$reveal ? 'wetoast_show' : ''}}">
-        <view class="wetoast__mask"/>
-        <view class="wetoast__bd" animation="{{$toast$animationData}}">
-            <block  wx:if="{{$toast$img}}">
-                <view class="wetoast__bd__img {{$toast$imgClassName || ''}}">
-                    <image class="wetoast__bd__img_desc" src="{{$toast$img}}" mode="{{$toast$imgMode || 'scaleToFill'}}"/>
-                </view>
-            </block>
-            <block  wx:if="{{$toast$title}}">
-                <view class="wetoast__bd__title {{$toast$titleClassName || ''}}">{{$toast$title}}</view>
-            </block>
-        </view>
+  <view class="group">
+    <text class="text"> {{$inputPrice$label}}:  </text>
+    <input class="text" placeholder="请输入。。" auto-focus bindchange="$inputPrice$bindTextChange"/>
+  </view>
+
+    
+  <view class="group">
+    <text class="text"> {{$inputAirConditionerNumber$label}}:  </text>
+    <input class="text" placeholder="请输入。。" auto-focus bindchange="$inputAirConditionerNumber$bindTextChange"/>
+  </view>
+
+    
+  <view class="group">
+    <text class="text"> {{$inputLayerHeight$label}}:  </text>
+    <input class="text" placeholder="请输入。。" auto-focus bindchange="$inputLayerHeight$bindTextChange"/>
+  </view>
+
+    
+  <view class="group">
+    <text class="text"> {{$inputRoomArea$label}}:  </text>
+    <input class="text" placeholder="请输入。。" auto-focus bindchange="$inputRoomArea$bindTextChange"/>
+  </view>
+
+    
+  <view class="group">
+    <text class="text"> {{$inputRackNumber$label}}:  </text>
+    <input class="text" placeholder="请输入。。" auto-focus bindchange="$inputRackNumber$bindTextChange"/>
+  </view>
+
+    <view class="submitContainer">
+      得分: {{score}}
     </view>
-
+    <button bindtap="calculate">计算</button>
   </view>

@@ -1,5 +1,12 @@
-@import "./groupitem.wxss";
-.picker {
-  padding: 13px;
+.group {
+  display: flex;
   background-color: #FFFFFF;
+  width: 100%;
+}
+.picker {
+  display: flex;
+  align-items: flex-start;
+  padding-left: 13px;
+  width: 100%;
+  font-size: 14px;
 }

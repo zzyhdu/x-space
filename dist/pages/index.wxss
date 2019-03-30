@@ -1,10 +1,5 @@
 @import "./../components/x-input.wxss";
 @import "./../components/x-picker.wxss";
-@import "./../npm/wepy-com-toast/toast.wxss";
-@import "./../components/group.wxss";
-@import "./../components/wepy-list.wxss";
-@import "./../components/counter.wxss";
-@import "./../components/panel.wxss";
 .userinfo {
   display: flex;
   flex-direction: column;
@@ -17,4 +12,12 @@
 }
 .userinfo-nickname {
   color: #aaa;
+}
+.container {
+  width: 100%;
+}
+.submitContainer {
+  width: 100%;
+  flex-direction: row;
+  padding-left: 13px;
 }

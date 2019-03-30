@@ -252,13 +252,84 @@ export default class ScoreCalculator{
         break;
       default:
     }
-    console.log('zzy','scoreItem',_datas);
   }
 
   get result(){
     const {_datas} = this;
+    for (let i in _datas) {
+      console.log('zzy','variable 1',i,_datas[i]);
+      switch (i) {
+        case propertyRightTypesIndex:
 
-    return 0;
+          break;
+        case equipmentRoomTypesIndex:
+
+          break;
+        case citysIndex:
+
+          break;
+        case addressTuningIndex:
+
+          break;
+        case channelBuildIndex:
+
+          break;
+        case batterTypesIndex:
+
+          break;
+        case environmentIndex:
+
+          break;
+        case powerIndex:
+
+          break;
+        case bearingTypesIndex:
+
+          break;
+        case buildTypesIndex:
+
+          break;
+
+        case houseTypesIndex:
+
+          break;
+        case name:
+
+          break;
+        case address:
+
+          break;
+        case longitude:
+
+          break;
+        case latitude:
+
+          break;
+
+        case price:
+
+          break;
+        case airConditionerNumber:
+
+          break;
+        case layerHeight:
+
+          break;
+        case roomArea:
+
+          break;
+        case rackNumber:
+
+          break;
+
+        default:
+
+      }
+      // if (object.hasOwnProperty(variable)) {
+      //   console.log('zzy','variable',variable,_datas[variable]);
+      // }
+    }
+    return 10;
   }
 };
 

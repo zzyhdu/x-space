@@ -2,10 +2,13 @@
   .group {
     flex-direction: row;
     display: flex;
+    align-items: center;
+
   }
   .text {
-    font-size: 18px;
+    font-size: 14px;
     font-weight: bold;
+    padding-left: 13px;
     &.red {
       color: red;
     }
@@ -16,8 +19,8 @@
 </style>
 <template>
   <view class="group">
-    <text class="text"> {{label}} </text>
-    <input placeholder="这是一个可以自动聚焦的input" auto-focus />
+    <text class="text"> {{label}}:  </text>
+    <input class="text" placeholder="请输入。。" auto-focus  @change='bindTextChange'/>
   </view>
 </template>
 <script>
@@ -36,7 +39,6 @@
     }
 
     onLoad () {
-      console.log('zzy','onLoad',this.mode);
       const self = this;
       switch (this.mode) {
         case ScoreItems.NAME:
@@ -68,7 +70,6 @@
           break;
         default:
       }
-      self.index = '0';
       this.$apply();
       // this.array =
     }
@@ -79,6 +80,11 @@
       tap () {
         console.log(`Clicked Group xpicker`)
       },
+      bindTextChange: function (e) {
+        console.log('picker发送选择改变，携带值为', e.detail.value )
+        scoreCalculator.onDataChange({scoreItem: this.mode,value: e.detail.value});
+      },
+
     }
   }
 </script>

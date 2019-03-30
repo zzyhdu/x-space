@@ -1,8 +1,15 @@
 <style type="less">
-  .group {}
-  .picker{
-    padding: 13px;
+  .group {
+    display: flex;
     background-color: #FFFFFF;
+    width: 100%;
+  }
+  .picker{
+    display: flex;
+    align-items: flex-start;
+    padding-left: 13px;
+    width: 100%;
+    font-size: 14px;
   }
 </style>
 <template>
@@ -16,7 +23,6 @@
 </template>
 <script>
   import wepy from 'wepy';
-  import GroupItem from './groupitem';
   import {datas,scoreCalculator,ScoreItems} from '../Utils';
 
   export default class XPicker extends wepy.component {
@@ -32,7 +38,6 @@
     }
 
     onLoad () {
-      console.log('zzy','onLoad',this.mode);
       const self = this;
       switch (this.mode) {
         case ScoreItems.CITYS:
@@ -87,7 +92,6 @@
     }
 
     components = {
-      groupitem: GroupItem
     }
     methods = {
       tap () {
